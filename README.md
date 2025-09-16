@@ -23,6 +23,7 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
 from django.contrib import admin
 class Movies(models.Model):
     M_ID = models.IntegerField(primary_key=True)
@@ -33,8 +34,7 @@ class Movies(models.Model):
 from .models import Movies
 admin.site.register(Movies)
 class MoviesAdmin(admin.ModelAdmin):
-    list_display=('M_ID', 'M_name', 'Release_date```
-
+    list_display=('M_ID', 'M_name', 'Release_date
 ```
 
 
