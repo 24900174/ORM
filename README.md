@@ -6,7 +6,7 @@ To develop a Django application to store and retrieve data from Car Inventory Da
 
 ## ENTITY RELATIONSHIP DIAGRAM
 
-
+![WhatsApp Image 2025-09-17 at 10 20 08_ca43cbe7](https://github.com/user-attachments/assets/e2588ba7-4ff7-41a1-886a-20dcfd4c715e)
 
 ## DESIGN STEPS
 
