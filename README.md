@@ -24,23 +24,27 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 ```
+models.py
+from django.db import models
 from django.contrib import admin
-class Movies(models.Model):
-    M_ID = models.IntegerField(primary_key=True)
-    M_name = models.CharField(max_length=100)
-    Release_date=models.DateField()
-    Director=models. CharField(max_length=50)
-    Actors=models. CharField(max_length=100)
-from .models import Movies
-admin.site.register(Movies)
-class MoviesAdmin(admin.ModelAdmin):
-    list_display=('M_ID', 'M_name', 'Release_date
+class Movie(models.Model):
+    title = models.CharField(max_length=255, help_text="Movie Title")
+    director = models.CharField(max_length=100, help_text="Director Name")
+    release_date = models.DateField(help_text="Release Date")
+    genre = models.CharField(max_length=50, help_text="Movie Genre")
+    rating = models.DecimalField(max_digits=3, decimal_places=1, help_text="Movie Rating (e.g., 8.5)")
+    duration = models.IntegerField(help_text="Duration in Minutes")
+
+class MovieAdmin(admin.ModelAdmin):
+    list_display = ('title', 'director', 'release_date', 'genre', 'rating', 'duration')
+# Create your models here.
+
 ```
 
 
 ## OUTPUT
-<img width="1906" height="972" alt="image" src="https://github.com/user-attachments/assets/7ddedd1c-db02-4051-aa2d-741bd53fc6e4" />
 
+![alt text](movie.png)
 
 
 ## RESULT
